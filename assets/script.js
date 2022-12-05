@@ -10,6 +10,15 @@ if (firstname === "irull") {
 } else {
   console.log("kamu pinterr yeey");
 }
+
+// let nama = prompt("hallo siapa nama anda?");
+// let jawab = "basyar";
+
+// if (nama === jawab) {
+//   alert(`hallo ${jawab} selamat datang `);
+// } else if (nama === "irul") {
+//   alert("terimaksih sudah mengunjungi website kami");
+// }
 //belajar else
 let a = 300;
 let b = 20;
@@ -26,7 +35,7 @@ switch (bahasa) {
   case "sunda":
     nyapa = "hayang berem";
     break;
-  case "jawa":
+  case "java":
     nyapa = "dolan yuhlah";
     break;
   case "batak":
@@ -37,7 +46,3 @@ switch (bahasa) {
 console.log(nyapa);
 console.log(bahasa);
 //belajar for loop
-
-for (let i = 10; i < 20; i++) {
-  console.log(i);
-}
