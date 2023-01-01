@@ -1,0 +1,42 @@
+@import url("//db.onlinewebfonts.com/c/021f3eb1da35b2a042907dc870c00b9c?family=TwentiethCenturyW01-XBdCn");
+@import url("https://fonts.googleapis.com/css2?family=Carter+One&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Carter One", cursive;
+}
+p {
+  text-align: justify;
+  /* font-family: "TwentiethCenturyW01-XBdCn"; */
+  text-transform: capitalize;
+}
+img {
+  max-width: 85%;
+}
+ul {
+  list-style-type: none;
+}
+li,
+a {
+  color: yellow;
+}
+table {
+  border: 1px solid black;
+  margin-top: 10px;
+  max-width: 95%;
+}
+
+.header {
+  background-color: rgb(252, 227, 115);
+  padding-top: 400px;
+  color: black;
+}
+.navbar {
+  background-color: black;
+  color: rgba(252, 185, 0, 1);
+}
+footer {
+  background-color: rgb(252, 227, 115);
+  color: rgb(0, 0, 0);
+}

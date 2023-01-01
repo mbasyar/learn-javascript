@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Carter+One&display=swap");
+@import url("//db.onlinewebfonts.com/c/021f3eb1da35b2a042907dc870c00b9c?family=TwentiethCenturyW01-XBdCn");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Carter One", cursive;
+}
+p {
+  /* font-family: "TwentiethCenturyW01-XBdCn";
+  src: url("//db.onlinewebfonts.com/t/021f3eb1da35b2a042907dc870c00b9c.eot");
+  src: url("//db.onlinewebfonts.com/t/021f3eb1da35b2a042907dc870c00b9c.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/021f3eb1da35b2a042907dc870c00b9c.woff2") format("woff2"),
+    url("//db.onlinewebfonts.com/t/021f3eb1da35b2a042907dc870c00b9c.woff") format("woff"), url("//db.onlinewebfonts.com/t/021f3eb1da35b2a042907dc870c00b9c.ttf") format("truetype"),
+    url("//db.onlinewebfonts.com/t/021f3eb1da35b2a042907dc870c00b9c.svg#TwentiethCenturyW01-XBdCn") format("svg"); */
+  text-align: justify;
+}
+h1,
+h2,
+h4 {
+  /* font-family: "Open Sans", sans-serif !important; */
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.0037em;
+  line-height: 36px;
+}
+h2 {
+  color: orangered;
+}
+img {
+  display: flex;
+  align-content: flex-start;
+  margin-bottom: 7px;
+  max-width: 80%;
+}
+h4 {
+  text-align: start;
+  color: black;
+  /* font-family: "Open Sans", sans-serif !important; */
+}
+.navbar {
+  background-color: black;
+  color: rgba(252, 185, 0, 1);
+}
+h3 {
+  background-color: #1f2b38;
+  border-radius: 10px;
+  box-sizing: border-box;
+  border: none;
+  color: white;
+  /* font-family: "Open Sans", sans-serif !important; */
+}
+ul {
+  list-style-type: none;
+}
+
+.header {
+  background-color: rgb(252, 227, 115);
+  padding-top: 400px;
+  color: black;
+}
+footer {
+  background-color: rgb(252, 227, 115);
+  color: rgb(0, 0, 0);
+}
+/* NEW */
+.buton {
+  margin: auto;
+  font-family: inherit;
+  font-weight: 400;
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  padding: 0.35em 0;
+  font-size: 17px;
+  border: none;
+  border-radius: 0.7em;
+  letter-spacing: 0.08em;
+  position: relative;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 2.1em;
+  padding-left: 3em;
+  padding-right: 0.7em;
+}
+
+.buton .icon {
+  background: #fff;
+  margin-right: 1em;
+  height: 2.2em;
+  width: 2.2em;
+  border-radius: 0.5em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 0.3em;
+  transition: all 0.7s;
+}
+
+.shere {
+  width: 1.3rem;
+  height: 1.3rem;
+  margin-left: 4px;
+  padding-top: 2px;
+}
+
+.buton:hover .icon {
+  width: calc(100% - 0.6rem);
+}
+
+.buton:hover .shere {
+  width: calc(100% - 0.6rem);
+  display: none;
+}
+
+.buton .icon-shere {
+  color: black;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: none;
+}
+
+.buton:hover .icon .icon-shere {
+  display: flex;
+}

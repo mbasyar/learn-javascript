@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DOM JS</title>
+    <link rel="stylesheet" href="dom.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+  </head>
+  <body style="background-color:#cca69a26">
+
+    <!--awal header dan navigasi-->
+
+      <div class="header text-center pt-5 pb-5">
+        <h1 class="text-center">bom dom dan events <strong>Javascript!</strong></h1>
+        <i>cara javascript mengontrol browser dan website</i>
+        </div>
+        <nav class="navbar  navbar-expand-lg">
+          <div class="container m-auto">
+            <a class="navbar-brand text-warning" href="#page">ECMAScript-6</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link text-warning" aria-current="page" href="#bom">BOM</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-warning" href="#dom">DOM</a>
+                </li>
+               <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle text-warning" href="#events" role="button" data-bs-toggle="dropdown" aria-expanded="false">EVENTS</a>
+                  <ul class="dropdown-menu bg-dark">
+                    <li><a class="dropdown-item text-warning" href="#eh">event handler</a></li>
+                    <li><a class="dropdown-item text-warning" href="#el">event listener</a></li>
+                    <li><a class="dropdown-item text-warning" href="#rangkuman">map-set</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    <!--akhir header & navigasi-->
+
+      <!--awal content-->
+
+       <div class="container mt-5 p-0" id="content3">
+          <div class="row text-center m-0">
+             <div class="col-md-8 col-lg-9 pt-3 pb-5 m-auto pb-2">
+                <h2 class="text-start mt-3 mb-3" id="page"> QUEST? </h2> <hr>
+                 <p>Cara JavaScript Mengontrol Website dan Browser Setelah membaca materi sebelumnya, maka akan muncul pertanyaan “Bagaimana JavaScript mengontrol sebuah website atau browser?” Jawabannya ada dua, dan keduanya akan kita bahas di modul ini, yakni melalui Browser Object Model (BOM) dan Document Object Model (DOM).</p>
+                 <img src="image.png" alt="img" class="mt-5">
+                </div>
+            <div class="col-md-8 col-lg-9 pt-3 pb-5 m-auto pb-2">
+                <h2 class="text-start mt-3 mb-3" id="bom"> <strong>Browser Object Model (BOM)</strong> </h2> <hr>
+                 <p>Yang pertama adalah BOM. Dengan BOM, kita dapat memberikan perintah-perintah khusus ke browser, misalnya melalui sebuah ‘atribut’ khusus milik browser yakni ‘window’ (akan kita membahasnya pada materi selanjutnya), sehingga kita bisa membuat browser menampilkan pesan pop-up. Caranya yakni menjalankan method alert() pada console milik browser. </p>
+                 <p>Melalui objek window inilah kode JavaScript kita bisa mengakses berbagai method dan atribut yang bisa membantu kita membuat halaman web menjadi lebih interaktif. Kemungkinan Anda akan tertegun melihat begitu banyak method serta atribut. Akan tetapi, Anda tidak diharapkan untuk menghafal semuanya karena pada materi berikutnya kita cukup membahas 3 method paling dasar yakni alert(), prompt(), dan objek console.</p>
+                 <h4 class="text-start mt-4">Method Alert()</h4>
+                 <p>Method alert() merupakan salah satu method BOM yang menerima satu parameter opsional berupa data string yang akan ditampilkan melalui sebuah pop-up browser
+                  contoh : alert('Halo user!'); </p>
+                  <h4 class="text-start mt-4">Method Prompt()</h4>
+                  <p>Sebelumnya kita telah mempelajari penggunaan method alert() untuk menampilkan pesan dalam dialog browser. Nah, selain menampilkan pesan, kita juga akan belajar cara mengambil data input dari user melalui dialog browser, yaitu prompt(). Method ini akan menampilkan sebuah dialog browser yang meminta user untuk mengisi kolom inputnya. Karena bisa menangkap input dari user, method ini memiliki lebih banyak fungsionalitas ketimbang alert(). </p>
+                 <h4 class="text-start mt-4">Console()</h4>
+                 <p>Akhirnya kita sampai pada pembahasan objek console . Objek ini merupakan peralatan yang wajib diketahui oleh semua Front-End Web Developer. Mengapa demikian? Karena objek console memberikan kita akses ke fitur debugging alias peralatan-peralatan yang bisa membantu menghilangkan bug yang bersembunyi di dalam kode JavaScript.
+                    Tentu Anda masih ingat jika kita ingin menampilkan sebuah nilai ke console browser, maka dapat menggunakan method log(). </p>
+                    <img src="Screenshot_1.png" alt="">
+            </div>
+            <div class="col-md-8 col-lg-9 pt-3 pb-5 m-auto pb-2">
+                <h2 class="text-start mt-3 mb-3" id="dom"> <strong>Document Object Model (DOM)</strong> </h2> <hr>
+                <p>Apa sih DOM itu? Pada lingkungan browser, DOM memberikan izin bagi kode JavaScript untuk mengakses dan memanipulasi konten pada dokumen melalui sebuah Application Programming Interface (API), yakni sesuatu yang memungkinkan JavaScript dan dokumen HTML untuk "berkomunikasi". Masih ingat Browser Object Model yang diwakilkan oleh objek window yang bisa kita masukkan ke kode JavaScript? Nah, DOM diwakilkan oleh global objek bernama document, yang mana dapat dimanfaatkan oleh JavaScript.</p>
+                <h4 class="text-start mt-4">DOM Tree</h4>
+                <p>Ketika Anda membaca topik sub-modul ini, kemungkinan akan muncul pertanyaan “Apa hubungannya DOM dengan tree (pohon)?”. Tree yang dimaksud di sini adalah nama dari sebuah struktur data pada komputer yang secara visual mirip seperti sebuah pohon. Struktur data ini disebut tree, karena layaknya pohon terdapat satu batang induk tunggal yang kemudian bercabang menjadi batang-batang lainnya dan bisa saja bercabang kembali. Jika batang tersebut buntu, maka ujungnya terdapat daun (pada struktur data tree, daun disebut sebagai node).</p>
+                <img src="https://dicoding-web-img.sgp1.cdn.digitaloceanspaces.com/original/academy/dos:9bab6403a125459fdc337b9de7cfc94820220524090443.png" width="600px">
+                <h4 class="text-start mt-3">Mencari DOM </h4>
+                <p>Untuk mengakses sebuah elemen HTML melalui DOM, kita gunakan objek yang bernama document. Objek ini berisi semua elemen yang berada pada HTML atau keseluruhan halaman yang terlihat pada jendela browser saat itu. Jika kita coba mengakses nilai dari global obyek document.</p>
+                <p>Objek document juga memiliki banyak sekali method yang tersedia, berikut beberapa method yang umum digunakan serta fungsinya</p>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Method</th><th>Contoh</th><th>Fungsi</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>getElementById()</td>
+                      <td>document.getElementById('display');</td>
+                      <td>Mengembalikan satu elemen yang memiliki nilai id "display".</td>
+                    </tr>
+                    <tr>
+                      <td>getElementsByName()</td>
+                      <td>document.getElementsByName('button')</td>
+                      <td>Mengembalikan banyak elemen (HTMLCollection) yang memiliki attribute name dengan nilai "button".</td>
+                    </tr>
+                    <tr>
+                      <td>getElementsByClassName()</td>
+                      <td>document.getElementsByClassName('button')</td>
+                      <td>Mengembalikan banyak elemen (HTMLCollection) yang memiliki attribute class dengan nilai "button".</td>
+                    </tr>
+                     <tr>
+                        <td>getElementsByTagName()</td><td>document.getElementsByTagName('div')</td>
+                        <td>Mengembalikan banyak elemen (HTMLCollection) yang merupakan &lt;div&gt; element.</td>
+                      </tr>
+                        <tr>
+                          <td>querySelector()</td>
+                          <td>document.querySelector('.button')</td>
+                          <td>Mengembalikan elemen pertama (node) yang menerapkan class "button".</td>
+                        </tr>
+                        <tr>
+                          <td>querySelectorAll()</td>
+                          <td>document.querySelectorAll('.button')</td>
+                          <td>Mengembalikan banyak Node dalam bentuk NodeList yang menerapkan class "button".</td></tr>
+                    </tbody>
+                </table>
+                <br>
+                <h4 class="text-start mt-3">Membuat Elemen HTML</h4>
+                <p>Manipulasi DOM memberikan kemampuan bagi kita untuk membuat elemen-elemen HTML melalui kode JavaScript. Selain itu, melalui DOM kita mampu membuat konten HTML. 
+                  Sekarang mari kita mulai dengan membahas method <i> createElement().</i> Dengan method tersebut, kita bisa membuat sebuah elemen HTML yang benar-benar baru tanpa memanipulasi isi konten berkas HTML. sprt membuat element div, paragraraf, img dll</p>
+                  <P>bagaimana jika kita menambahkan teks? Caranya adalah kita berikan nilai string yang baru dan berikan pada properti innerText . contoh : <br> <br>
+                  <i>const newElement = document.createElement('p');</i> <br>
+                  <i>newElement.innerText = 'Selamat datang ke HTML kosong ini :)'</i></P> <br>
+                  <p>Untuk memberikan atribut src pada elemen <imG>, kita bisa memanggil function setAttribute(). Function ini menerima dua parameter, yaitu nama atribut yang ingin ditambahkan dan nilai yang ingin diberikan dalam artribut tersebut.</p>
+            </div>
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="col-md-8 col-lg-9 pt-3 pb-5 m-auto pb-2">
+                <h2 class="text-start mt-3 mb-3" id="events"> <strong>EVENTS</strong> </h2> <hr>
+                <p>Ketika browser selesai menampilkan halaman web, menekan tombol tertentu pada keyboard, atau mungkin meletakkan kursor pada elemen HTML tertentu, itulah yang dinamakan event alias “kejadian”. Hampir apa pun yang berhubungan dengan adanya interaksi dengan berkas HTML bisa kita sebut sebagai event. Lalu, apa fungsinya?
+                    Melalui JavaScript, kita bisa menulis kode tertentu yang akan dijalankan ketika merasakan sebuah “kejadian” tertentu. Contohnya jika user menekan sebuah tombol, JavaScript (melalui DOM) akan mengubah tampilan halaman web kita seperti mengubah warna pada elemen tertentu, atau bahkan membawa kita ke bagian tertentu pada halaman web tersebut.</p>
+             <h4 class="text-start mt-4">Macam Macam Event</h4>
+             <p>Walau istilah event terkesan sangat abstrak, kita dapat menggolongkan beberapa event menjadi beberapa kategori berdasarkan sumber dari mana event tersebut terjadi. Contohnya kejadian yang berhubungan dengan kursor mouse, keyboard, kegiatan copy sebuah elemen teks pada berkas HTML, atau bahkan dari ukuran window browser.
+                Berikut beberapa pembahasan terhadap kategori umum serta beberapa event-event yang tergolong pada kategori tersebut.</p>
+                <h5 class="text-start">Window Events</h5>
+                <p>Window Events adalah kejadian-kejadian yang berasal dari browser alias pada window.</p>
+                <h5 class="text-start">Form Events</h5>
+                <p>Form Events adalah kejadian-kejadian yang berasal dari sebuah elemen HTML dengan tag form.</p>
+                <h5 class="text-start">Mouse Events</h5>
+                <p>Mouse Events adalah kejadian-kejadian yang berasal dari kegiatan klik mouse.</p>
+                <img src="Screenshot_2.png" alt="">
+            </div>
+        </div>
+     </div>
+        
+      <!--awal footer-->
+      <footer class="text-center p-5 mt-5">
+        <h5>Copyright 2022 | Programmer kok gitu</h5>
+        <i>Build by Rulzz</i> <br> <br>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    </body>
+  </html>
+  
